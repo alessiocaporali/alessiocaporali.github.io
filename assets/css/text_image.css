@@ -1,0 +1,16 @@
+.split-section {
+    display: flex;
+}
+
+.text-container {
+    flex: 1;
+    vertical-align:middle;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    vertical-align:middle;
+}
