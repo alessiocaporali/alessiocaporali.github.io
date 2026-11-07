@@ -1,117 +1,160 @@
-/*
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+/* Alessio Caporali — site interactions (no dependencies). */
+(function () {
+  'use strict';
 
-(function($) {
+  var root = document.documentElement;
 
-	var $window = $(window),
-		$body = $('body'),
-		$header = $('#header'),
-		$footer = $('#footer'),
-		$main = $('#main'),
-		settings = {
+  /* ---------- Theme toggle ---------- */
+  var toggle = document.querySelector('.theme-toggle');
+  var media = window.matchMedia('(prefers-color-scheme: dark)');
 
-			// Parallax background effect?
-				parallax: true,
+  function currentTheme() {
+    return root.getAttribute('data-theme') || (media.matches ? 'dark' : 'light');
+  }
+  function syncToggleLabel() {
+    if (!toggle) return;
+    var next = currentTheme() === 'dark' ? 'light' : 'dark';
+    toggle.setAttribute('aria-label', 'Switch to ' + next + ' mode');
+    toggle.setAttribute('title', 'Switch to ' + next + ' mode');
+  }
+  if (toggle) {
+    toggle.addEventListener('click', function () {
+      var next = currentTheme() === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      syncToggleLabel();
+    });
+    if (media.addEventListener) media.addEventListener('change', syncToggleLabel);
+    syncToggleLabel();
+  }
 
-			// Parallax factor (lower = more intense, higher = less intense).
-				parallaxFactor: 20
+  /* ---------- Header border on scroll ---------- */
+  var header = document.querySelector('.site-header');
+  function onScroll() {
+    if (header) header.classList.toggle('is-scrolled', window.scrollY > 8);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 
-		};
+  /* ---------- Active nav link ---------- */
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-links a'));
+  if ('IntersectionObserver' in window && navLinks.length) {
+    var byId = {};
+    navLinks.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(function (a) { a.classList.remove('is-active'); });
+        var link = byId[entry.target.id];
+        if (link) link.classList.add('is-active');
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    Object.keys(byId).forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+  }
 
-	// Breakpoints.
-		breakpoints({
-			xlarge:  [ '1281px',  '1800px' ],
-			large:   [ '981px',   '1280px' ],
-			medium:  [ '737px',   '980px'  ],
-			small:   [ '481px',   '736px'  ],
-			xsmall:  [ null,      '480px'  ],
-		});
+  /* ---------- Reduced motion: freeze the hero wires ---------- */
+  var wireSvg = document.querySelector('.hero-wire');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  function applyMotionPref() {
+    if (!wireSvg || !wireSvg.pauseAnimations) return;
+    if (reduce.matches) wireSvg.pauseAnimations(); else wireSvg.unpauseAnimations();
+  }
+  applyMotionPref();
+  if (reduce.addEventListener) reduce.addEventListener('change', applyMotionPref);
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+  /* ---------- Publications: filter + search ---------- */
+  var controls = document.querySelector('.pub-controls');
+  var pubs = Array.prototype.slice.call(document.querySelectorAll('.pub'));
+  var years = Array.prototype.slice.call(document.querySelectorAll('.pub-year'));
+  var empty = document.querySelector('.pub-empty');
+  var segs = Array.prototype.slice.call(document.querySelectorAll('.seg'));
+  var input = controls ? controls.querySelector('input[type="search"]') : null;
+  var filter = 'all';
 
-	// Touch?
-		if (browser.mobile) {
+  if (controls && pubs.length) {
+    controls.hidden = false;
 
-			// Turn on touch mode.
-				$body.addClass('is-touch');
+    var counts = { all: pubs.length, journal: 0, conference: 0 };
+    pubs.forEach(function (li) {
+      counts[li.dataset.type] = (counts[li.dataset.type] || 0) + 1;
+      li._text = li.textContent.replace(/\s+/g, ' ').toLowerCase();
+      // remember original markup for search highlighting
+      li._title = li.querySelector('.pub-title');
+      li._titleHTML = li._title ? li._title.innerHTML : '';
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('[data-count]'), function (el) {
+      el.textContent = counts[el.getAttribute('data-count')] || 0;
+    });
 
-			// Height fix (mostly for iOS).
-				window.setTimeout(function() {
-					$window.scrollTop($window.scrollTop() + 1);
-				}, 0);
+    function escapeRe(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
 
-		}
+    function apply() {
+      var q = input ? input.value.trim().toLowerCase() : '';
+      var terms = q ? q.split(/\s+/) : [];
+      var shown = 0;
 
-	// Footer.
-		breakpoints.on('<=medium', function() {
-			$footer.insertAfter($main);
-		});
+      pubs.forEach(function (li) {
+        var okType = filter === 'all' || li.dataset.type === filter;
+        var okText = terms.every(function (t) { return li._text.indexOf(t) !== -1; });
+        var visible = okType && okText;
+        li.hidden = !visible;
+        if (visible) shown++;
 
-		breakpoints.on('>medium', function() {
-			$footer.appendTo($header);
-		});
+        if (li._title) {
+          if (visible && terms.length) {
+            var re = new RegExp('(' + terms.map(escapeRe).join('|') + ')', 'gi');
+            li._title.innerHTML = li._titleHTML.replace(re, '<mark>$1</mark>');
+          } else {
+            li._title.innerHTML = li._titleHTML;
+          }
+        }
+      });
 
-	// Header.
+      years.forEach(function (y) {
+        y.hidden = !y.querySelector('.pub:not([hidden])');
+      });
+      if (empty) empty.hidden = shown !== 0;
+    }
 
-		// Parallax background.
+    segs.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        filter = btn.getAttribute('data-filter');
+        segs.forEach(function (b) {
+          var on = b === btn;
+          b.classList.toggle('is-active', on);
+          b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+        apply();
+      });
+    });
+    if (input) input.addEventListener('input', apply);
+  }
 
-			// Disable parallax on IE (smooth scrolling is jerky), and on mobile platforms (= better performance).
-				if (browser.name == 'ie'
-				||	browser.mobile)
-					settings.parallax = false;
+  /* ---------- Lightbox for research figures ---------- */
+  var dialog = document.querySelector('.lightbox');
+  if (dialog && typeof dialog.showModal === 'function') {
+    var dImg = dialog.querySelector('img');
+    Array.prototype.forEach.call(document.querySelectorAll('.card-media[data-full]'), function (btn) {
+      btn.addEventListener('click', function () {
+        var img = btn.querySelector('img');
+        dImg.src = btn.getAttribute('data-full');
+        dImg.alt = img ? img.alt : '';
+        dialog.showModal();
+      });
+    });
+    dialog.querySelector('.lightbox-close').addEventListener('click', function () { dialog.close(); });
+    dialog.addEventListener('click', function (e) { if (e.target === dialog) dialog.close(); });
+  } else {
+    // No <dialog> support: open the figure in a new tab instead.
+    Array.prototype.forEach.call(document.querySelectorAll('.card-media[data-full]'), function (btn) {
+      btn.addEventListener('click', function () { window.open(btn.getAttribute('data-full'), '_blank', 'noopener'); });
+    });
+  }
 
-			if (settings.parallax) {
-
-				breakpoints.on('<=medium', function() {
-
-					$window.off('scroll.strata_parallax');
-					$header.css('background-position', '');
-
-				});
-
-				breakpoints.on('>medium', function() {
-
-					$header.css('background-position', 'left 0px');
-
-					$window.on('scroll.strata_parallax', function() {
-						$header.css('background-position', 'left ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px');
-					});
-
-				});
-
-				$window.on('load', function() {
-					$window.triggerHandler('scroll');
-				});
-
-			}
-
-	// Main Sections: Two.
-
-		// Lightbox gallery.
-			$window.on('load', function() {
-
-				$('#two').poptrox({
-					caption: function($a) { return $a.next('h3').text(); },
-					overlayColor: '#2c2c2c',
-					overlayOpacity: 0.85,
-					popupCloserText: '',
-					popupLoaderText: '',
-					selector: '.work-item a.image',
-					usePopupCaption: true,
-					usePopupDefaultStyling: false,
-					usePopupEasyClose: false,
-					usePopupNav: true,
-					windowMargin: (breakpoints.active('<=small') ? 0 : 50)
-				});
-
-			});
-
-})(jQuery);
+  /* ---------- Footer year ---------- */
+  var y = document.querySelector('[data-current-year]');
+  if (y) y.textContent = new Date().getFullYear();
+})();

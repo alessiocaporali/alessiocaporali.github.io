@@ -1,195 +1,623 @@
-<!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Alessio Caporali</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/academicons.css"/>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alessio Caporali — Robotics &amp; Machine Learning</title>
+  <meta name="description" content="Alessio Caporali, Junior Assistant Professor at the University of Bologna (LAR). Research on robotic perception and manipulation of deformable linear objects: computer vision, tactile sensing, and deep learning for physical systems.">
+  <meta name="author" content="Alessio Caporali">
+  <link rel="canonical" href="https://alessiocaporali.github.io/">
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/alessio_caporali_bw.jpg" alt="" /></a>
-					<h1><strong>Alessio Caporali</strong><br />
-						Junior Assistant Professor (fixed-term)<br />
-						<a href="https://lar-unibo.github.io/">Laboratory of Automation and Robotics</a><br />
-					University of Bologna </h1>
-				</div>
-			</header>
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Alessio Caporali">
+  <meta property="og:description" content="Robotic perception and manipulation of deformable linear objects. Junior Assistant Professor, University of Bologna.">
+  <meta property="og:url" content="https://alessiocaporali.github.io/">
+  <meta property="og:image" content="https://alessiocaporali.github.io/images/alessio_caporali.jpg">
+  <meta name="twitter:card" content="summary">
 
-		<!-- Main -->
-			<div id="main">
+  <meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
-				<!-- One -->
-					<section id="one">
-						<header class="major">
-							<h2>About Me</h2>
-						</header>
-							<h3>Short Bio</h3>
-							<p>Junior Assistant Professor (fixed-term) at the University of Bologna since 2024, working at the intersection of robotics and machine learning.  In April 2024, I successfully defended my PhD thesis titled <i>'Robotic Perception and Manipulation of Deformable Linear Objects'</i>, advised by Prof. Gianluca Palli.</p>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
 
-							<h3>Research Interests</h3>
-							<p>
-							My research focuses on the perception and manipulation of deformable objects, aiming to advance the capabilities of robotic systems in handling complex objects. My primary research interests include computer vision and tactile sensing, which involve developing algorithms to enhance a robot's understanding of target objects and their environment; robotic manipulation, particularly addressing tasks such as grasping, sliding, and motion planning; deformable object modeling, to predict and control their behavior; and deep learning for physical systems, leveraging neural network approximations of dynamical systems to facilitate robotic tasks.
-							</p>
-						<ul class="actions">
-							<li><a href="doc/Academic_CV.pdf" target="_blank" class="button icon solid fa-download">Download CV</a></li>
-						</ul>
-					</section>
+  <script>
+    /* Apply saved theme before first paint to avoid a flash. */
+    try { var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+  </script>
 
-				<!-- Two -->
-					<section id="two">
-						<header class="major">
-							<h2>My Research on Deformable Linear Objects</h2>
-						</header>
-							<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/dlo_dataset_generation.jpg" class="image fit thumb"><img src="images/dlo_dataset_generation.jpg" alt="" /></a>
-								<h3>Vision-based Dataset Generation</h3>
-									<ul>
-										<li>Auto-generated Wires Dataset for Semantic Segmentation with Domain-Independence</li>
-										<li>A Weakly Supervised Semi-Automatic Image Labeling Approach for Deformable Linear Objects</li>
-									</ul>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/dlo_2d_perception.jpg" class="image fit thumb"><img src="images/dlo_2d_perception.jpg" alt="" /></a>
-								<h3>2D Perception</h3>
-								<ul>
-									<li>Ariadne+: Deep Learning--Based Augmented Framework for the Instance Segmentation of Wires</li>
-									<li>FASTDLO: Fast Deformable Linear Objects Instance Segmentation</li>
-									<li>RT-DLO: Real-Time Deformable Linear Objects Instance Segmentation</li>
-								</ul>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alessio Caporali",
+    "jobTitle": "Junior Assistant Professor",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Bologna",
+      "department": { "@type": "Organization", "name": "Laboratory of Automation and Robotics (LAR)" }
+    },
+    "email": "mailto:alessio.caporali@unibo.it",
+    "url": "https://alessiocaporali.github.io/",
+    "image": "https://alessiocaporali.github.io/images/alessio_caporali.jpg",
+    "sameAs": [
+      "https://scholar.google.com/citations?user=3qLzUf0AAAAJ",
+      "https://orcid.org/0000-0001-9522-4231",
+      "https://github.com/alessiocaporali",
+      "https://www.unibo.it/sitoweb/alessio.caporali"
+    ],
+    "knowsAbout": ["Robotics", "Machine Learning", "Computer Vision", "Tactile Sensing", "Deformable Object Manipulation"]
+  }
+  </script>
+</head>
+<body>
 
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/dlo_3d_perception.jpg" class="image fit thumb"><img src="images/dlo_3d_perception.jpg" alt="" /></a>
-								<h3>3D Perception</h3>
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-github" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></symbol>
+    <symbol id="i-scholar" viewBox="0 0 24 24"><path fill="currentColor" d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></symbol>
+    <symbol id="i-orcid" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></g></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></g></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/><path d="M9 10h.01M15 10h.01"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></g></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></g></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></g></symbol>
+  </svg>
 
-								<ul>
-									<li>Deformable Linear Objects 3D Shape Estimation and Tracking From Multiple 2D Views</li>
-									<li>3D DLO Shape Detection and Grasp Planning from Multiple 2D Views</li>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/dlo_manipulation.jpg" class="image fit thumb"><img src="images/dlo_manipulation.jpg" alt="" /></a>
-								<h3>Manipulation</h3>
-								<ul>
-									<li>Deformable Linear Objects Manipulation With Online Model Parameters Estimation</li>
-								</ul>
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="nav-brand" href="#top">Alessio Caporali</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+        <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+      </button>
+    </nav>
+  </header>
 
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/dlo_perceiver.png" class="image fit thumb"><img src="images/dlo_perceiver.png" alt="" /></a>
-								<h3>Text-based Perception</h3>
-								<ul>
-									<li>DLO Perceiver: Grounding Large Language Model for Deformable Linear Objects Perception</li>
-								</ul>
+  <main id="main">
 
-							</article>
-						
-						
-						</div>
-					</section>
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <svg class="hero-wire" viewBox="0 0 1200 420" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <path class="wire wire-b" d="M-60 340 C 180 260, 360 420, 620 300 S 980 140, 1260 230">
+          <animate attributeName="d" dur="14s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"
+            values="M-60 340 C 180 260, 360 420, 620 300 S 980 140, 1260 230;
+                    M-60 320 C 200 300, 380 380, 620 320 S 960 170, 1260 200;
+                    M-60 340 C 180 260, 360 420, 620 300 S 980 140, 1260 230"/>
+        </path>
+        <path class="wire wire-a" d="M-60 300 C 220 120, 420 400, 660 250 S 1000 60, 1260 150">
+          <animate attributeName="d" dur="11s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"
+            values="M-60 300 C 220 120, 420 400, 660 250 S 1000 60, 1260 150;
+                    M-60 280 C 240 170, 400 360, 660 270 S 1020 100, 1260 120;
+                    M-60 300 C 220 120, 420 400, 660 250 S 1000 60, 1260 150"/>
+        </path>
+      </svg>
 
-				<!-- Three -->
-					<section id="three">
-						<h2>Publications</h2>
-						
-						Check also my Google Scholar profile for the most updated list of publications:
-						<p><i class="ai ai-google-scholar ai-2x"></i>
-							<a href="https://scholar.google.com/citations?user=3qLzUf0AAAAJ&hl">Google Scholar profile</a>
-						</p>
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Robotics · Machine Learning · Deformable Objects</p>
+          <h1>Alessio Caporali</h1>
+          <p class="hero-role">
+            Junior Assistant Professor (fixed-term)<br>
+            <a href="https://lar-unibo.github.io/">Laboratory of Automation and Robotics</a> · University of Bologna
+          </p>
+          <p class="hero-lede">I teach robots to see, understand and handle cables, wires and other deformable linear objects.</p>
 
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="doc/Academic_CV.pdf" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> Download CV
+            </a>
+            <ul class="social" aria-label="Profiles">
+              <li><a href="https://scholar.google.com/citations?user=3qLzUf0AAAAJ&amp;hl=en" aria-label="Google Scholar" title="Google Scholar"><svg class="icon" aria-hidden="true"><use href="#i-scholar"/></svg></a></li>
+              <li><a href="https://orcid.org/0000-0001-9522-4231" aria-label="ORCID" title="ORCID"><svg class="icon" aria-hidden="true"><use href="#i-orcid"/></svg></a></li>
+              <li><a href="https://github.com/alessiocaporali" aria-label="GitHub" title="GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a></li>
+              <li><a href="mailto:alessio.caporali@unibo.it" aria-label="Email" title="Email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
+            </ul>
+          </div>
+        </div>
 
-						<h3>Journal Papers</h3>
-						<ul>
-							<li><u>A. Caporali</u>, K. Galassi, G. Palli, <a href="https://ieeexplore.ieee.org/document/10742556">"DLO Perceiver: Grounding Large Language Model for Deformable Linear Objects Perception,"</a> in IEEE Robotics and Automation Letters, 2024</li>
+        <figure class="hero-portrait">
+          <img src="images/alessio_caporali.jpg" width="621" height="621" alt="Portrait of Alessio Caporali">
+        </figure>
+      </div>
+    </section>
 
-							<li><u>A. Caporali</u>, P. Kicki, K. Galassi, R. Zanella, K. Walas and G. Palli, <a href="https://ieeexplore.ieee.org/document/10412116">"Deformable Linear Objects Manipulation With Online Model Parameters Estimation,"</a> in IEEE Robotics and Automation Letters, 2024</li>
+    <!-- About -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div>
+          <p class="section-kicker">01 — About</p>
+          <h2 id="about-title">About me</h2>
+        </div>
+        <div class="about-body">
+          <h3 class="subhead">Short bio</h3>
+          <p>Junior Assistant Professor (fixed-term) at the University of Bologna since 2024, working at the intersection of robotics and machine learning. In April 2024, I successfully defended my PhD thesis titled <em>“Robotic Perception and Manipulation of Deformable Linear Objects”</em>, advised by Prof. Gianluca Palli.</p>
 
-							<li><u>A. Caporali</u>, K. Galassi and G. Palli, <a href="https://ieeexplore.ieee.org/document/10120758">"Deformable Linear Objects 3D Shape Estimation and Tracking From Multiple 2D Views,"</a> in IEEE Robotics and Automation Letters, 2023 </li>
-							
-							<li><u>A. Caporali</u>, K. Galassi, B. L. Žagar, R. Zanella, G. Palli and A. C. Knoll, <a href="https://ieeexplore.ieee.org/document/10045806">"RT-DLO: Real-Time Deformable Linear Objects Instance Segmentation,"</a> in IEEE Transactions on Industrial Informatics, 2023 </li>
+          <h3 class="subhead">Research interests</h3>
+          <p>My research focuses on the perception and manipulation of deformable objects, aiming to advance the capabilities of robotic systems in handling complex objects. My primary research interests include:</p>
+          <ol class="interests">
+            <li>
+              <span class="interest-num">01</span>
+              <div><strong>Computer vision and tactile sensing</strong>
+              <p>Developing algorithms to enhance a robot’s understanding of target objects and their environment.</p></div>
+            </li>
+            <li>
+              <span class="interest-num">02</span>
+              <div><strong>Robotic manipulation</strong>
+              <p>Particularly addressing tasks such as grasping, sliding, and motion planning.</p></div>
+            </li>
+            <li>
+              <span class="interest-num">03</span>
+              <div><strong>Deformable object modeling</strong>
+              <p>To predict and control their behavior.</p></div>
+            </li>
+            <li>
+              <span class="interest-num">04</span>
+              <div><strong>Deep learning for physical systems</strong>
+              <p>Leveraging neural network approximations of dynamical systems to facilitate robotic tasks.</p></div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
 
-							<li><u>A. Caporali</u>, M. Pantano, L. Janisch, D. Regulin, G. Palli and D. Lee, <a href="https://ieeexplore.ieee.org/document/10008018">"A Weakly Supervised Semi-Automatic Image Labeling Approach for Deformable Linear Objects," </a>in IEEE Robotics and Automation Letters, 2023 </li>
+    <!-- Research -->
+    <section class="section section-alt" id="research" aria-labelledby="research-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">02 — Research</p>
+          <h2 id="research-title">My research on deformable linear objects</h2>
+          <p class="section-intro">From building datasets to closing the loop with vision and touch: the research lines I have been developing on cables, wires and other deformable linear objects (DLOs).</p>
+        </div>
 
-							<li><u>A. Caporali</u>, K. Galassi, R. Zanella and G. Palli, <a href="https://ieeexplore.ieee.org/document/9830852">"FASTDLO: Fast Deformable Linear Objects Instance Segmentation,"</a>in IEEE Robotics and Automation Letters, 2023 </li>
+        <a class="featured" href="https://doi.org/10.1177/02783649261432253">
+          <span class="featured-badge">New · IJRR 2026</span>
+          <span class="featured-title">Robotic perception and manipulation of deformable linear objects: A survey</span>
+          <span class="featured-meta">A. Caporali, I. Cuiral-Zueco, G. López-Nicolás, G. Palli — <em>The International Journal of Robotics Research</em></span>
+          <span class="featured-cta">Read the survey <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        </a>
 
-							<li>R. Meattini, <u>A. Caporali</u>, A. Bernardini, G. Palli and C. Melchiorri, <a href="https://ieeexplore.ieee.org/document/10305264">"Self-Supervised Regression of sEMG Signals Combining Non-Negative Matrix Factorization With Deep Neural Networks for Robot Hand Multiple Grasping Motion Control,"</a> in IEEE Robotics and Automation Letters, 2023</li>
+        <div class="cards">
+          <article class="card">
+            <button class="card-media" type="button" data-full="images/dlo_dataset_generation.jpg" aria-label="Enlarge image: vision-based dataset generation">
+              <img src="images/dlo_dataset_generation.jpg" width="884" height="730" loading="lazy" alt="Synthetic and semi-automatically labeled images of cables used to build segmentation datasets">
+            </button>
+            <div class="card-body">
+              <h3>Vision-based Dataset Generation</h3>
+              <ul class="card-papers">
+                <li><a href="https://doi.org/10.1109/ICCCR49711.2021.9349395">Auto-generated Wires Dataset for Semantic Segmentation with Domain-Independence</a></li>
+                <li><a href="https://doi.org/10.1109/LRA.2023.3234799">A Weakly Supervised Semi-Automatic Image Labeling Approach for Deformable Linear Objects</a></li>
+                <li><a href="https://doi.org/10.1109/IROS58592.2024.10802495">Deformable Objects Perception is Just a Few Clicks Away – Dense Annotations from Sparse Inputs</a></li>
+              </ul>
+            </div>
+          </article>
 
-							<li><u>A. Caporali</u>, R. Zanella, D. De Gregorio and G. Palli, <a href="https://ieeexplore.ieee.org/document/9721686">"Ariadne+: Deep Learning--Based Augmented Framework for the Instance Segmentation of Wires,"</a>  in IEEE Transactions on Industrial Informatics, 2022 </li>
+          <article class="card">
+            <button class="card-media" type="button" data-full="images/dlo_2d_perception.jpg" aria-label="Enlarge image: 2D perception">
+              <img src="images/dlo_2d_perception.jpg" width="1218" height="464" loading="lazy" alt="Photos of tangled cables on different backgrounds with the corresponding colored instance segmentation masks">
+            </button>
+            <div class="card-body">
+              <h3>2D Perception</h3>
+              <ul class="card-papers">
+                <li><a href="https://doi.org/10.1109/TII.2022.3154477">Ariadne+: Deep Learning–Based Augmented Framework for the Instance Segmentation of Wires</a></li>
+                <li><a href="https://doi.org/10.1109/LRA.2022.3189791">FASTDLO: Fast Deformable Linear Objects Instance Segmentation</a></li>
+                <li><a href="https://doi.org/10.1109/TII.2023.3245641">RT-DLO: Real-Time Deformable Linear Objects Instance Segmentation</a></li>
+              </ul>
+            </div>
+          </article>
 
-						</ul>
+          <article class="card">
+            <button class="card-media" type="button" data-full="images/dlo_3d_perception.jpg" aria-label="Enlarge image: 3D perception">
+              <img src="images/dlo_3d_perception.jpg" width="1182" height="842" loading="lazy" alt="3D shape of a cable reconstructed from multiple 2D camera views">
+            </button>
+            <div class="card-body">
+              <h3>3D Perception</h3>
+              <ul class="card-papers">
+                <li><a href="https://doi.org/10.1109/LRA.2023.3273518">Deformable Linear Objects 3D Shape Estimation and Tracking From Multiple 2D Views</a></li>
+                <li><a href="https://doi.org/10.1109/AIM46487.2021.9517655">3D DLO Shape Detection and Grasp Planning from Multiple 2D Views</a></li>
+              </ul>
+            </div>
+          </article>
 
-						<h3>Conference Papers</h3>
-						<ul>
-						
-						<li>B. L. Žagar, <u>A. Caporali</u> et al., <a href="https://ieeexplore.ieee.org/document/10196168">"Copy and Paste Augmentation for Deformable Wiring Harness Bags Segmentation,"</a> IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM), 2023</li>	
+          <article class="card">
+            <button class="card-media" type="button" data-full="images/dlo_manipulation.jpg" aria-label="Enlarge image: manipulation">
+              <img src="images/dlo_manipulation.jpg" width="1300" height="713" loading="lazy" alt="Diagram: a DLO neural network model trained offline, then updated online in a perception and robot manipulation loop">
+            </button>
+            <div class="card-body">
+              <h3>Manipulation</h3>
+              <ul class="card-papers">
+                <li><a href="https://doi.org/10.1109/LRA.2024.3357310">Deformable Linear Objects Manipulation With Online Model Parameters Estimation</a></li>
+                <li><a href="https://doi.org/10.1109/TASE.2025.3562231">GNN Topology Representation Learning for Deformable Multi-Linear Objects Dual-Arm Robotic Manipulation</a></li>
+                <li><a href="https://doi.org/10.1109/TMECH.2025.3562295">Robotic Manipulation of Deformable Linear Objects via Multi-View Model-based Visual Tracking</a></li>
+              </ul>
+            </div>
+          </article>
 
-						<li>D. Chiaravalli, <u>A. Caporali</u>, A. Friz, R. Meattini and G. Palli, <a href="https://ieeexplore.ieee.org/document/10196145">"A Vision-based Shared Autonomy Framework for Deformable Linear Objects Manipulation,"</a> IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM), 2023</li>
+          <article class="card">
+            <button class="card-media" type="button" data-full="images/dlo_perceiver.png" aria-label="Enlarge image: text-based perception">
+              <img src="images/dlo_perceiver.png" width="822" height="551" loading="lazy" alt="Diagram: a text prompt such as 'cable red top' and a camera image are fed to DLO Perceiver, which outputs the mask of the requested cable">
+            </button>
+            <div class="card-body">
+              <h3>Text-based Perception</h3>
+              <ul class="card-papers">
+                <li><a href="https://doi.org/10.1109/LRA.2024.3491428">DLO Perceiver: Grounding Large Language Model for Deformable Linear Objects Perception</a></li>
+              </ul>
+            </div>
+          </article>
 
-						<li>K. Galassi, <u>A. Caporali</u> and G. Palli, <a href="https://ieeexplore.ieee.org/document/9817006">"Cable Detection and Manipulation for DLO-in-Hole Assembly Tasks,"</a> IEEE 5th International Conference on Industrial Cyber-Physical Systems (ICPS), 2022</li>
+          <article class="card">
+            <div class="card-media card-media-art" aria-hidden="true">
+              <svg viewBox="0 0 320 200" class="art-connector" focusable="false">
+                <path class="art-wire" d="M-10 150 C 60 150, 70 70, 140 80 S 200 110, 222 100"/>
+                <rect class="art-pad" x="196" y="64" width="24" height="12" rx="3"/>
+                <rect class="art-pad" x="196" y="124" width="24" height="12" rx="3"/>
+                <path class="art-finger" d="M190 40 h36 v36 M190 160 h36 v-36"/>
+                <rect class="art-housing" x="250" y="70" width="52" height="60" rx="6"/>
+                <path class="art-pins" d="M262 86 v28 M276 86 v28 M290 86 v28"/>
+                <path class="art-arrow" d="M228 100 h14"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3>Vision &amp; Tactile Assembly</h3>
+              <ul class="card-papers">
+                <li><a href="https://doi.org/10.1109/AIM46487.2021.9517447">Combining Vision and Tactile Data for Cable Grasping</a></li>
+                <li><a href="https://doi.org/10.1109/AIM55361.2024.10637081">Monocular Estimation of Connector Orientation: Combining Deformable Linear Object Priors and Smooth Angle Classification</a></li>
+                <li><a href="https://doi.org/10.1109/AIM64088.2025.11175819">Towards Automated Connector Assembly: Wire Insertion Combining Tactile and Vision Sensors</a></li>
+                <li><a href="https://doi.org/10.1109/TMECH.2026.3654272">Vision and Tactile Sensing for DLO Manipulation and Pin Insertion in Robotic Connector Assembly</a></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-						<li><u>A. Caporali</u>, K. Galassi and G. Palli, <a href="https://ieeexplore.ieee.org/document/9517655">"3D DLO Shape Detection and Grasp Planning from Multiple 2D Views,"</a> IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM), 2021</li>
+    <!-- Publications -->
+    <section class="section" id="publications" aria-labelledby="pubs-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">03 — Publications</p>
+          <h2 id="pubs-title">Publications</h2>
+          <p class="section-intro">Check also my <a href="https://scholar.google.com/citations?user=3qLzUf0AAAAJ&amp;hl=en">Google Scholar profile</a> for the most updated list of publications.</p>
+        </div>
 
-						<li><u>A. Caporali</u>, K. Galassi, G. Laudante, G. Palli and S. Pirozzi, <a href="https://ieeexplore.ieee.org/document/9517447">"Combining Vision and Tactile Data for Cable Grasping,"</a> IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM), 2021</li>
+        <div class="pub-controls" hidden>
+          <div class="segmented" role="group" aria-label="Filter by type">
+            <button type="button" class="seg is-active" data-filter="all" aria-pressed="true">All <span class="seg-count" data-count="all"></span></button>
+            <button type="button" class="seg" data-filter="journal" aria-pressed="false">Journals <span class="seg-count" data-count="journal"></span></button>
+            <button type="button" class="seg" data-filter="conference" aria-pressed="false">Conferences <span class="seg-count" data-count="conference"></span></button>
+          </div>
+          <label class="search">
+            <span class="visually-hidden">Search publications</span>
+            <input type="search" placeholder="Search title, author, venue…" autocomplete="off">
+          </label>
+        </div>
+        <p class="pub-empty" hidden>No publications match your search.</p>
 
-						<li><u>A. Caporali</u>, W. B. Bedada and G. Palli, <a href="https://ieeexplore.ieee.org/document/9468189">"A Cyber-Physical System for Clothes Detection, Manipulation and Washing Machine Loading,"</a> 4th IEEE International Conference on Industrial Cyber-Physical Systems (ICPS), 2021</li>
+        <div class="pub-list">
 
-						<li>R. Zanella, <u>A. Caporali</u>, K. Tadaka, D. De Gregorio and G. Palli, <a href="https://ieeexplore.ieee.org/document/9349395">"Auto-generated Wires Dataset for Semantic Segmentation with Domain-Independence,"</a> 2021 International Conference on Computer, Control and Robotics (ICCCR), 2021 </li>
-						
-						<li><u>A. Caporali</u> and G. Palli, <a href="https://ieeexplore.ieee.org/document/9211879">"Pointcloud-based Identification of Optimal Grasping Poses for Cloth-like Deformable Objects,"</a> 25th IEEE International Conference on Emerging Technologies and Factory Automation (ETFA), 2020 </li>
+          <div class="pub-year" data-year="2026">
+            <h3 class="pub-year-label">2026</h3>
+            <ol>
+              <li class="pub" data-type="journal">
+                <span class="pub-venue-tag">IJRR</span>
+                <div class="pub-main">
+                  <a class="pub-title" href="https://doi.org/10.1177/02783649261432253">Robotic perception and manipulation of deformable linear objects: A survey</a>
+                  <p class="pub-authors"><span class="me">A. Caporali</span>, I. Cuiral-Zueco, G. López-Nicolás, G. Palli</p>
+                  <p class="pub-venue"><em>The International Journal of Robotics Research</em>, 2026</p>
+                </div>
+              </li>
+              <li class="pub" data-type="journal">
+                <span class="pub-venue-tag">T-MECH</span>
+                <div class="pub-main">
+                  <a class="pub-title" href="https://doi.org/10.1109/TMECH.2026.3654272">Vision and Tactile Sensing for DLO Manipulation and Pin Insertion in Robotic Connector Assembly</a>
+                  <p class="pub-authors"><span class="me">A. Caporali</span>, M. Mirto, S. Pirozzi, G. Palli</p>
+                  <p class="pub-venue"><em>IEEE/ASME Transactions on Mechatronics</em>, vol. 31, no. 5, pp. 5186–5197, 2026</p>
+                </div>
+              </li>
+            </ol>
+          </div>
 
-						</ul>
+          <div class="pub-year" data-year="2025">
+            <h3 class="pub-year-label">2025</h3>
+            <ol>
+              <li class="pub" data-type="journal">
+                <span class="pub-venue-tag">T-ASE</span>
+                <div class="pub-main">
+                  <a class="pub-title" href="https://doi.org/10.1109/TASE.2025.3562231">GNN Topology Representation Learning for Deformable Multi-Linear Objects Dual-Arm Robotic Manipulation</a>
+                  <p class="pub-authors"><span class="me">A. Caporali</span>, K. Galassi, R. Zanella, G. Palli</p>
+                  <p class="pub-venue"><em>IEEE Transactions on Automation Science and Engineering</em>, vol. 22, pp. 14738–14751, 2025</p>
+                </div>
+              </li>
+              <li class="pub" data-type="journal">
+                <span class="pub-venue-tag">T-MECH</span>
+                <div class="pub-main">
+                  <a class="pub-title" href="https://doi.org/10.1109/TMECH.2025.3562295">Robotic Manipulation of Deformable Linear Objects via Multi-View Model-based Visual Tracking</a>
+                  <p class="pub-authors"><span class="me">A. Caporali</span>, G. Palli</p>
+                  <p class="pub-venue"><em>IEEE/ASME Transactions on Mechatronics</em>, vol. 30, no. 5, pp. 3966–3977, 2025</p>
+                </div>
+              </li>
+              <li class="pub" data-type="conference">
+                <span class="pub-venue-tag">AIM</span>
+                <div class="pub-main">
+                  <a class="pub-title" href="https://doi.org/10.1109/AIM64088.2025.11175819">Towards Automated Connector Assembly: Wire Insertion Combining Tactile and Vision Sensors</a>
+                  <p class="pub-authors">M. Mirto, <span class="me">A. Caporali</span>, G. Laudante, S. Pirozzi, G. Palli</p>
+                  <p class="pub-venue"><em>IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM)</em>, 2025</p>
+                </div>
+              </li>
+            </ol>
+          </div>
 
-					</section>
-		
+          <div class="pub-year" data-year="2024">
+            <h3 class="pub-year-label">2024</h3>
+            <ol>
+              <li class="pub" data-type="journal">
+                <span class="pub-venue-tag">RA-L</span>
+                <div class="pub-main">
+                  <a class="pub-title" href="https://doi.org/10.1109/LRA.2024.3491428">DLO Perceiver: Grounding Large Language Model for Deformable Linear Objects Perception</a>
+                  <p class="pub-authors"><span class="me">A. Caporali</span>, K. Galassi, G. Palli</p>
+                  <p class="pub-venue"><em>IEEE Robotics and Automation Letters</em>, vol. 9, no. 12, pp. 11385–11392, 2024</p>
+                </div>
+              </li>
+              <li class="pub" data-type="journal">
+                <span class="pub-venue-tag">RA-L</span>
+                <div class="pub-main">
+                  <a class="pub-title" href="https://doi.org/10.1109/LRA.2024.3357310">Deformable Linear Objects Manipulation With Online Model Parameters Estimation</a>
+                  <p class="pub-authors"><span class="me">A. Caporali</span>, P. Kicki, K. Galassi, R. Zanella, K. Walas, G. Palli</p>
+                  <p class="pub-venue"><em>IEEE Robotics and Automation Letters</em>, vol. 9, no. 3, pp. 2598–2605, 2024</p>
+                </div>
+              </li>
+              <li class="pub" data-type="conference">
+                <span class="pub-venue-tag">IROS</span>
+                <div class="pub-main">
+                  <a class="pub-title" href="https://doi.org/10.1109/IROS58592.2024.10802495">Deformable Objects Perception is Just a Few Clicks Away – Dense Annotations from Sparse Inputs</a>
+                  <p class="pub-authors"><span class="me">A. Caporali</span>, K. Galassi, M. Pantano, G. Palli</p>
+                  <p class="pub-venue"><em>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</em>, pp. 5880–5887, 2024</p>
+                </div>
+              </li>
+              <li class="pub" data-type="conference">
+                <span class="pub-venue-tag">AIM</span>
+                <div class="pub-main">
+                  <a class="pub-title" href="https://doi.org/10.1109/AIM55361.2024.10637081">Monocular Estimation of Connector Orientation: Combining Deformable Linear Object Priors and Smooth Angle Classification</a>
+                  <p class="pub-authors"><span class="me">A. Caporali</span>, K. Galassi, G. Berselli, G. Palli</p>
+                  <p class="pub-venue"><em>IEEE International Conference on Advanced Intelligent Mechatronics (AIM)</em>, pp. 799–804, 2024</p>
+                </div>
+              </li>
+              <li class="pub" data-type="conference">
+                <span class="pub-venue-tag">AIM</span>
+                <div class="pub-main">
+                  <a class="pub-title" href="https://doi.org/10.1109/AIM55361.2024.10637054">Scalable Shared Encoding Architecture for Learning-Based Error Detection in Robotic Wiring Harness Assembly</a>
+                  <p class="pub-authors">K. Galassi, <span class="me">A. Caporali</span>, G. Laudante, G. Palli</p>
+                  <p class="pub-venue"><em>IEEE International Conference on Advanced Intelligent Mechatronics (AIM)</em>, pp. 518–523, 2024</p>
+                </div>
+              </li>
+            </ol>
+          </div>
 
-				<!-- Four -->
-				<section id="four">
-					<h2>Research Group and Additional Info</h2>
+          <div class="pub-year" data-year="2023">
+            <h3 class="pub-year-label">2023</h3>
+            <ol>
+              <li class="pub" data-type="journal">
+                <span class="pub-venue-tag">RA-L</span>
+                <div class="pub-main">
+                  <a class="pub-title" href="https://doi.org/10.1109/LRA.2023.3273518">Deformable Linear Objects 3D Shape Estimation and Tracking From Multiple 2D Views</a>
+                  <p class="pub-authors"><span class="me">A. Caporali</span>, K. Galassi, G. Palli</p>
+                  <p class="pub-venue"><em>IEEE Robotics and Automation Letters</em>, vol. 8, no. 6, pp. 3852–3859, 2023</p>
+                </div>
+              </li>
+              <li class="pub" data-type="journal">
+                <span class="pub-venue-tag">TII</span>
+                <div class="pub-main">
+                  <a class="pub-title" href="https://doi.org/10.1109/TII.2023.3245641">RT-DLO: Real-Time Deformable Linear Objects Instance Segmentation</a>
+                  <p class="pub-authors"><span class="me">A. Caporali</span>, K. Galassi, B. L. Žagar, R. Zanella, G. Palli, A. C. Knoll</p>
+                  <p class="pub-venue"><em>IEEE Transactions on Industrial Informatics</em>, vol. 19, no. 11, pp. 11333–11342, 2023</p>
+                </div>
+              </li>
+              <li class="pub" data-type="journal">
+                <span class="pub-venue-tag">RA-L</span>
+                <div class="pub-main">
+                  <a class="pub-title" href="https://doi.org/10.1109/LRA.2023.3234799">A Weakly Supervised Semi-Automatic Image Labeling Approach for Deformable Linear Objects</a>
+                  <p class="pub-authors"><span class="me">A. Caporali</span>, M. Pantano, L. Janisch, D. Regulin, G. Palli, D. Lee</p>
+                  <p class="pub-venue"><em>IEEE Robotics and Automation Letters</em>, vol. 8, no. 2, pp. 1013–1020, 2023</p>
+                </div>
+              </li>
+              <li class="pub" data-type="journal">
+                <span class="pub-venue-tag">RA-L</span>
+                <div class="pub-main">
+                  <a class="pub-title" href="https://doi.org/10.1109/LRA.2023.3329764">Self-Supervised Regression of sEMG Signals Combining Non-Negative Matrix Factorization With Deep Neural Networks for Robot Hand Multiple Grasping Motion Control</a>
+                  <p class="pub-authors">R. Meattini, <span class="me">A. Caporali</span>, A. Bernardini, G. Palli, C. Melchiorri</p>
+                  <p class="pub-venue"><em>IEEE Robotics and Automation Letters</em>, vol. 8, no. 12, pp. 8533–8540, 2023</p>
+                </div>
+              </li>
+              <li class="pub" data-type="conference">
+                <span class="pub-venue-tag">AIM</span>
+                <div class="pub-main">
+                  <a class="pub-title" href="https://doi.org/10.1109/AIM46323.2023.10196168">Copy and Paste Augmentation for Deformable Wiring Harness Bags Segmentation</a>
+                  <p class="pub-authors">B. L. Žagar, <span class="me">A. Caporali</span>, A. Szymko, P. Kicki, K. Walas, G. Palli, A. C. Knoll</p>
+                  <p class="pub-venue"><em>IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM)</em>, pp. 721–726, 2023</p>
+                </div>
+              </li>
+              <li class="pub" data-type="conference">
+                <span class="pub-venue-tag">AIM</span>
+                <div class="pub-main">
+                  <a class="pub-title" href="https://doi.org/10.1109/AIM46323.2023.10196145">A Vision-based Shared Autonomy Framework for Deformable Linear Objects Manipulation</a>
+                  <p class="pub-authors">D. Chiaravalli, <span class="me">A. Caporali</span>, A. Friz, R. Meattini, G. Palli</p>
+                  <p class="pub-venue"><em>IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM)</em>, pp. 733–738, 2023</p>
+                </div>
+              </li>
+            </ol>
+          </div>
 
-					<a href="https://lar-unibo.github.io/">Laboratory of Automation and Robotics (LAR)</a>
-					<br \>
-					<a href="https://www.unibo.it/sitoweb/alessio.caporali">Institutional personal webpage (UNIBO)</a>
+          <div class="pub-year" data-year="2022">
+            <h3 class="pub-year-label">2022</h3>
+            <ol>
+              <li class="pub" data-type="journal">
+                <span class="pub-venue-tag">RA-L</span>
+                <div class="pub-main">
+                  <a class="pub-title" href="https://doi.org/10.1109/LRA.2022.3189791">FASTDLO: Fast Deformable Linear Objects Instance Segmentation</a>
+                  <p class="pub-authors"><span class="me">A. Caporali</span>, K. Galassi, R. Zanella, G. Palli</p>
+                  <p class="pub-venue"><em>IEEE Robotics and Automation Letters</em>, vol. 7, no. 4, pp. 9075–9082, 2022</p>
+                </div>
+              </li>
+              <li class="pub" data-type="journal">
+                <span class="pub-venue-tag">TII</span>
+                <div class="pub-main">
+                  <a class="pub-title" href="https://doi.org/10.1109/TII.2022.3154477">Ariadne+: Deep Learning–Based Augmented Framework for the Instance Segmentation of Wires</a>
+                  <p class="pub-authors"><span class="me">A. Caporali</span>, R. Zanella, D. De Gregorio, G. Palli</p>
+                  <p class="pub-venue"><em>IEEE Transactions on Industrial Informatics</em>, vol. 18, no. 12, pp. 8607–8617, 2022</p>
+                </div>
+              </li>
+              <li class="pub" data-type="conference">
+                <span class="pub-venue-tag">ICPS</span>
+                <div class="pub-main">
+                  <a class="pub-title" href="https://doi.org/10.1109/ICPS51978.2022.9817006">Cable Detection and Manipulation for DLO-in-Hole Assembly Tasks</a>
+                  <p class="pub-authors">K. Galassi, <span class="me">A. Caporali</span>, G. Palli</p>
+                  <p class="pub-venue"><em>IEEE 5th International Conference on Industrial Cyber-Physical Systems (ICPS)</em>, 2022</p>
+                </div>
+              </li>
+            </ol>
+          </div>
 
-				
-					</div>
-				</section>
+          <div class="pub-year" data-year="2021">
+            <h3 class="pub-year-label">2021</h3>
+            <ol>
+              <li class="pub" data-type="conference">
+                <span class="pub-venue-tag">AIM</span>
+                <div class="pub-main">
+                  <a class="pub-title" href="https://doi.org/10.1109/AIM46487.2021.9517655">3D DLO Shape Detection and Grasp Planning from Multiple 2D Views</a>
+                  <p class="pub-authors"><span class="me">A. Caporali</span>, K. Galassi, G. Palli</p>
+                  <p class="pub-venue"><em>IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM)</em>, pp. 424–429, 2021</p>
+                </div>
+              </li>
+              <li class="pub" data-type="conference">
+                <span class="pub-venue-tag">AIM</span>
+                <div class="pub-main">
+                  <a class="pub-title" href="https://doi.org/10.1109/AIM46487.2021.9517447">Combining Vision and Tactile Data for Cable Grasping</a>
+                  <p class="pub-authors"><span class="me">A. Caporali</span>, K. Galassi, G. Laudante, G. Palli, S. Pirozzi</p>
+                  <p class="pub-venue"><em>IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM)</em>, pp. 436–441, 2021</p>
+                </div>
+              </li>
+              <li class="pub" data-type="conference">
+                <span class="pub-venue-tag">ICPS</span>
+                <div class="pub-main">
+                  <a class="pub-title" href="https://doi.org/10.1109/ICPS49255.2021.9468189">A Cyber-Physical System for Clothes Detection, Manipulation and Washing Machine Loading</a>
+                  <p class="pub-authors"><span class="me">A. Caporali</span>, W. B. Bedada, G. Palli</p>
+                  <p class="pub-venue"><em>4th IEEE International Conference on Industrial Cyber-Physical Systems (ICPS)</em>, pp. 519–524, 2021</p>
+                  <p class="pub-award"><svg class="icon" aria-hidden="true"><use href="#i-award"/></svg> Best Student Paper Award</p>
+                </div>
+              </li>
+              <li class="pub" data-type="conference">
+                <span class="pub-venue-tag">ICCCR</span>
+                <div class="pub-main">
+                  <a class="pub-title" href="https://doi.org/10.1109/ICCCR49711.2021.9349395">Auto-generated Wires Dataset for Semantic Segmentation with Domain-Independence</a>
+                  <p class="pub-authors">R. Zanella, <span class="me">A. Caporali</span>, K. Tadaka, D. De Gregorio, G. Palli</p>
+                  <p class="pub-venue"><em>International Conference on Computer, Control and Robotics (ICCCR)</em>, pp. 292–298, 2021</p>
+                </div>
+              </li>
+            </ol>
+          </div>
 
-			</div>
+          <div class="pub-year" data-year="2020">
+            <h3 class="pub-year-label">2020</h3>
+            <ol>
+              <li class="pub" data-type="conference">
+                <span class="pub-venue-tag">ETFA</span>
+                <div class="pub-main">
+                  <a class="pub-title" href="https://doi.org/10.1109/ETFA46521.2020.9211879">Pointcloud-based Identification of Optimal Grasping Poses for Cloth-like Deformable Objects</a>
+                  <p class="pub-authors"><span class="me">A. Caporali</span>, G. Palli</p>
+                  <p class="pub-venue"><em>25th IEEE International Conference on Emerging Technologies and Factory Automation (ETFA)</em>, pp. 581–586, 2020</p>
+                </div>
+              </li>
+            </ol>
+          </div>
 
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<li><a href="https://github.com/alessiocaporali" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="mailto:alessio.caporali@unibo.it" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						
+        </div>
+      </div>
+    </section>
 
-					
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Alessio Caporali</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+    <!-- Contact -->
+    <section class="section section-alt" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div>
+          <p class="section-kicker">04 — Contact</p>
+          <h2 id="contact-title">Research group &amp; additional info</h2>
+          <p class="section-intro">Happy to talk about research collaborations, theses and projects on robotic perception and manipulation.</p>
+          <a class="btn btn-primary" href="mailto:alessio.caporali@unibo.it">
+            <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> alessio.caporali@unibo.it
+          </a>
+        </div>
+        <ul class="link-list">
+          <li>
+            <a href="https://lar-unibo.github.io/">
+              <svg class="icon" aria-hidden="true"><use href="#i-building"/></svg>
+              <span><strong>Laboratory of Automation and Robotics (LAR)</strong><small>Research group</small></span>
+              <svg class="icon link-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.unibo.it/sitoweb/alessio.caporali">
+              <svg class="icon" aria-hidden="true"><use href="#i-building"/></svg>
+              <span><strong>Institutional personal webpage</strong><small>University of Bologna (UNIBO)</small></span>
+              <svg class="icon link-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://scholar.google.com/citations?user=3qLzUf0AAAAJ&amp;hl=en">
+              <svg class="icon" aria-hidden="true"><use href="#i-scholar"/></svg>
+              <span><strong>Google Scholar</strong><small>Full list of publications</small></span>
+              <svg class="icon link-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://orcid.org/0000-0001-9522-4231">
+              <svg class="icon" aria-hidden="true"><use href="#i-orcid"/></svg>
+              <span><strong>ORCID</strong><small>0000-0001-9522-4231</small></span>
+              <svg class="icon link-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/alessiocaporali">
+              <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+              <span><strong>GitHub</strong><small>@alessiocaporali</small></span>
+              <svg class="icon link-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </li>
+          <li class="link-static">
+            <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+            <span><strong>DEI, University of Bologna</strong><small>Viale Risorgimento 2, 40136 Bologna, Italy</small></span>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+  </main>
 
-	</body>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span data-current-year>2026</span> Alessio Caporali</p>
+      <p class="muted">Last updated November 2026</p>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" aria-label="Image preview">
+    <button class="lightbox-close" type="button" aria-label="Close">×</button>
+    <img alt="">
+  </dialog>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
 </html>
