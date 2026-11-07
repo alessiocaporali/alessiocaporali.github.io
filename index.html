@@ -279,6 +279,7 @@
                 <li><a href="https://doi.org/10.1109/AIM55361.2024.10637081">Monocular Estimation of Connector Orientation: Combining Deformable Linear Object Priors and Smooth Angle Classification</a></li>
                 <li><a href="https://doi.org/10.1109/AIM64088.2025.11175819">Towards Automated Connector Assembly: Wire Insertion Combining Tactile and Vision Sensors</a></li>
                 <li><a href="https://doi.org/10.1109/TMECH.2026.3654272">Vision and Tactile Sensing for DLO Manipulation and Pin Insertion in Robotic Connector Assembly</a></li>
+                <li><a href="https://doi.org/10.1109/AIM65483.2026.11658157">A Dual-Arm Robotic System for Autonomous Connector Assembly via Vision-Tactile Sensing and Contact-Based Pose Refinement</a></li>
               </ul>
             </div>
           </article>
@@ -293,6 +294,11 @@
           <p class="section-kicker">03 — Publications</p>
           <h2 id="pubs-title">Publications</h2>
           <p class="section-intro">Check also my <a href="https://scholar.google.com/citations?user=3qLzUf0AAAAJ&amp;hl=en">Google Scholar profile</a> for the most updated list of publications.</p>
+          <!-- Citation metrics: refreshed monthly from Google Scholar (all-time values). -->
+          <p class="scholar-stats">
+            <a href="https://scholar.google.com/citations?user=3qLzUf0AAAAJ&amp;hl=en"><strong data-scholar="citations">606</strong> citations · h-index <strong data-scholar="h-index">12</strong></a>
+            <span class="scholar-stats-note">Google Scholar, <span data-scholar="updated">November 2026</span></span>
+          </p>
         </div>
 
         <div class="pub-controls" hidden>
@@ -300,6 +306,7 @@
             <button type="button" class="seg is-active" data-filter="all" aria-pressed="true">All <span class="seg-count" data-count="all"></span></button>
             <button type="button" class="seg" data-filter="journal" aria-pressed="false">Journals <span class="seg-count" data-count="journal"></span></button>
             <button type="button" class="seg" data-filter="conference" aria-pressed="false">Conferences <span class="seg-count" data-count="conference"></span></button>
+            <button type="button" class="seg" data-filter="preprint" aria-pressed="false">Preprints <span class="seg-count" data-count="preprint"></span></button>
           </div>
           <label class="search">
             <span class="visually-hidden">Search publications</span>
@@ -308,7 +315,36 @@
         </div>
         <p class="pub-empty" hidden>No publications match your search.</p>
 
+        <!--
+          Publication list: follows the Google Scholar profile (user=3qLzUf0AAAAJ).
+          - Preprints: own group at the top (data-type="preprint").
+          - Journal + conference papers: grouped by year, journals first (data-type="journal" | "conference").
+          - Excluded on purpose: workshop papers and European Robotics Forum (ERF) chapters.
+          - The PhD thesis lives in its own block below the list.
+        -->
         <div class="pub-list">
+
+          <div class="pub-year pub-group" data-group="preprints">
+            <h3 class="pub-year-label">Preprints</h3>
+            <ol>
+              <li class="pub" data-type="preprint">
+                <span class="pub-venue-tag">arXiv</span>
+                <div class="pub-main">
+                  <a class="pub-title" href="https://arxiv.org/abs/2611.03825">A Tutorial on Shape Servoing of Deformable Objects – Part II: Advanced Concepts</a>
+                  <p class="pub-authors">I. Cuiral-Zueco, <span class="me">A. Caporali</span>, M. Aranda, G. Palli, G. López-Nicolás, Y. Mezouar</p>
+                  <p class="pub-venue"><em>arXiv preprint</em> arXiv:2611.03825, 2026</p>
+                </div>
+              </li>
+              <li class="pub" data-type="preprint">
+                <span class="pub-venue-tag">arXiv</span>
+                <div class="pub-main">
+                  <a class="pub-title" href="https://arxiv.org/abs/2610.40559">A Tutorial on Shape Servoing of Deformable Objects – Part I: Fundamentals</a>
+                  <p class="pub-authors">I. Cuiral-Zueco, <span class="me">A. Caporali</span>, M. Aranda, G. Palli, G. López-Nicolás, Y. Mezouar</p>
+                  <p class="pub-venue"><em>arXiv preprint</em> arXiv:2610.40559, 2026</p>
+                </div>
+              </li>
+            </ol>
+          </div>
 
           <div class="pub-year" data-year="2026">
             <h3 class="pub-year-label">2026</h3>
@@ -327,6 +363,14 @@
                   <a class="pub-title" href="https://doi.org/10.1109/TMECH.2026.3654272">Vision and Tactile Sensing for DLO Manipulation and Pin Insertion in Robotic Connector Assembly</a>
                   <p class="pub-authors"><span class="me">A. Caporali</span>, M. Mirto, S. Pirozzi, G. Palli</p>
                   <p class="pub-venue"><em>IEEE/ASME Transactions on Mechatronics</em>, vol. 31, no. 5, pp. 5186–5197, 2026</p>
+                </div>
+              </li>
+              <li class="pub" data-type="conference">
+                <span class="pub-venue-tag">AIM</span>
+                <div class="pub-main">
+                  <a class="pub-title" href="https://doi.org/10.1109/AIM65483.2026.11658157">A Dual-Arm Robotic System for Autonomous Connector Assembly via Vision-Tactile Sensing and Contact-Based Pose Refinement</a>
+                  <p class="pub-authors">M. Mirto, <span class="me">A. Caporali</span>, Ž. Gosar, S. Pirozzi, G. Palli</p>
+                  <p class="pub-venue"><em>IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM)</em>, 2026</p>
                 </div>
               </li>
             </ol>
@@ -545,6 +589,17 @@
             </ol>
           </div>
 
+        </div>
+
+        <!-- PhD thesis: kept separate from the publication list. -->
+        <div class="thesis">
+          <h3 class="subhead">PhD thesis</h3>
+          <a class="featured thesis-card" href="https://doi.org/10.48676/unibo/amsdottorato/11171">
+            <span class="featured-badge">PhD · University of Bologna · 2024</span>
+            <span class="featured-title">Robotic Perception and Manipulation of Deformable Linear Objects</span>
+            <span class="featured-meta">PhD in Biomedical, Electrical and Systems Engineering. Advisor: Prof. Gianluca Palli · Co-advisor: Prof. Claudio Melchiorri</span>
+            <span class="featured-cta">Read the thesis <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </a>
         </div>
       </div>
     </section>
