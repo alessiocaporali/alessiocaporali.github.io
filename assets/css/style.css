@@ -18,6 +18,7 @@
   --accent-ink: #b23c0d;      /* accent for text on light bg (AA) */
   --accent-soft: rgba(224, 82, 27, 0.10);
   --wire-2: #2f6fd6;
+  --info-ink: #2456a8;
   --media-bg: #ffffff;
   --shadow: 0 1px 2px rgba(20, 22, 28, 0.04), 0 8px 24px rgba(20, 22, 28, 0.06);
   --shadow-hover: 0 2px 4px rgba(20, 22, 28, 0.06), 0 16px 40px rgba(20, 22, 28, 0.10);
@@ -43,6 +44,7 @@
     --accent-ink: #ff9a66;
     --accent-soft: rgba(255, 122, 61, 0.14);
     --wire-2: #5b93f0;
+    --info-ink: #8fb4f5;
     --media-bg: #f4f4f2;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.25);
     --shadow-hover: 0 2px 4px rgba(0, 0, 0, 0.35), 0 16px 40px rgba(0, 0, 0, 0.35);
@@ -61,6 +63,7 @@
   --accent-ink: #ff9a66;
   --accent-soft: rgba(255, 122, 61, 0.14);
   --wire-2: #5b93f0;
+  --info-ink: #8fb4f5;
   --media-bg: #f4f4f2;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.25);
   --shadow-hover: 0 2px 4px rgba(0, 0, 0, 0.35), 0 16px 40px rgba(0, 0, 0, 0.35);
@@ -616,7 +619,7 @@ a:hover { text-decoration-color: currentColor; }
 
 .pub-year {
   display: grid;
-  grid-template-columns: 96px minmax(0, 1fr);
+  grid-template-columns: 104px minmax(0, 1fr);
   gap: 24px;
   padding: 28px 0;
   border-top: 1px solid var(--border);
@@ -664,6 +667,49 @@ a:hover { text-decoration-color: currentColor; }
   border-color: color-mix(in srgb, var(--accent) 40%, transparent);
   background: var(--accent-soft);
 }
+
+.pub[data-type="preprint"] .pub-venue-tag {
+  color: var(--info-ink);
+  border-color: color-mix(in srgb, var(--wire-2) 40%, transparent);
+  background: color-mix(in srgb, var(--wire-2) 10%, transparent);
+}
+
+.scholar-stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 14px;
+  margin: 20px 0 0;
+}
+.scholar-stats a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: border-color .15s ease;
+}
+.scholar-stats a:hover { border-color: var(--accent); }
+.scholar-stats strong {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+.scholar-stats-note {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.thesis { margin-top: 56px; }
+.thesis .featured { margin-bottom: 0; }
 
 .pub-title {
   font-family: var(--font-display);

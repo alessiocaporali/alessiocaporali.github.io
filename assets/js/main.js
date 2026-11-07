@@ -88,6 +88,11 @@
     Array.prototype.forEach.call(document.querySelectorAll('[data-count]'), function (el) {
       el.textContent = counts[el.getAttribute('data-count')] || 0;
     });
+    // Hide filter buttons for types with no entries (e.g. no preprints).
+    segs.forEach(function (b) {
+      var f = b.getAttribute('data-filter');
+      if (f !== 'all' && !counts[f]) b.hidden = true;
+    });
 
     function escapeRe(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
 
